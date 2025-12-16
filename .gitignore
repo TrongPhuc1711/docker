@@ -1,0 +1,26 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Laravel
+/backend/vendor/
+/backend/storage/*.log
+/backend/storage/framework/*
+!/backend/storage/framework/.gitignore
+/backend/storage/app/*
+!/backend/storage/app/.gitignore
+/backend/storage/logs/*
+/backend/bootstrap/cache/*
+/backend/.env
+
+# Env
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
