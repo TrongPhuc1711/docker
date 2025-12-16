@@ -3,6 +3,14 @@ FROM php:8.4-apache
 # Bật rewrite cho Laravel
 RUN a2enmod rewrite
 
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libzip-dev \
+    && docker-php-ext-install zip pdo pdo_mysql \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 # Cài extension
 RUN docker-php-ext-install pdo pdo_mysql
 
